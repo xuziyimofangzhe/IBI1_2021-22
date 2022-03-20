@@ -1,5 +1,5 @@
 I like tea
-I like dogs
+I like dogs very much
 I like sun
 I like cubes
 I like stars
@@ -8,4 +8,6 @@ I like math
 I like movies
 I like books
 I like games
+I like running
+I don't like fishing
 
