@@ -1,0 +1,5 @@
+Question：How have new cases and total cases developed over time in Germany?Plot the new numbers and total numbers of COVID cases over time in Germany.
+
+from line 54 to line 70
+
+The plot drew was what I expected. Through this question, I consolidated what I had learned earlier. Also I tried to calculate the totals myself, and I explored other parameters that made the graph look better.
