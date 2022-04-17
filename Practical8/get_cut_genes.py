@@ -1,17 +1,4 @@
 f=open("C:/Users/xzy/IBI1_2021-22/Practical8/Saccharomyces_cerevisiae.R64-1-1.cdna.all.fa")
-'''
-seqs=[]
-for line in f:
-    if not line.startswith('>'):
-        seqs.append(line.replace('\n',''))
-f.close()
-sum_1=''
-for seq in seqs:
-    sum_1=sum_1+str(seq)
-sum_1=sum_1.upper()
-print(sum_1)
-'''
-#seq ='ATGCAATCGACTACGATCAATCGAGGGCC'
 fout = open('C:/Users/xzy/IBI1_2021-22/Practical8/cut_genes.fa','w')
 EcoRI='GAATTC'
 gene_order=0
@@ -43,8 +30,6 @@ for line in f:
                 fout.write(gene_info1)
                 gene_info2=str(sum_1+"\n")
                 fout.write(gene_info2)
-                #print(name_now[0:8],"        ",len(sum_1))
-                #print(sum_1)
     if not line.startswith('>'):
         seqs.append(line.replace('\n',''))
 f.close()

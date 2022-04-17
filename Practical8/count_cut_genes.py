@@ -21,8 +21,6 @@ for line in f:
             if sum_1[i:i+6]==EcoRI:
                 count=count+1
                 name_now=list_name[gene_order-2]
-                #print(name_now[0:8],"        ",len(sum_1))
-                #print(sum_1)
         if count!=0:
             j = 0
             genename = ""
@@ -33,8 +31,6 @@ for line in f:
             info2=str(sum_1)+"\n"
             fout1.write(info1)
             fout1.write(info2)
-            #print(name_now[0:8], "        ", count+1)
-            #print(sum_1)
     if not line.startswith('>'):
         seqs.append(line.replace('\n',''))
 f.close()
