@@ -34,7 +34,12 @@ for line in f:
             if sum_1[i:i+6]==EcoRI:
                 judge=False
                 name_now=list_name[gene_order-2]
-                gene_info1=str(name_now[0:8])+str("        ")+str(len(sum_1))+"\n"
+                j=0
+                genename=""
+                while name_now[j]!="_":
+                    genename=genename+name_now[j]
+                    j=j+1
+                gene_info1=str(genename)+str("        ")+str(len(sum_1))+"\n"
                 fout.write(gene_info1)
                 gene_info2=str(sum_1+"\n")
                 fout.write(gene_info2)
@@ -44,5 +49,6 @@ for line in f:
         seqs.append(line.replace('\n',''))
 f.close()
 fout.close()
+
 
 

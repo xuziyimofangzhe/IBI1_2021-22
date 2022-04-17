@@ -24,7 +24,12 @@ for line in f:
                 #print(name_now[0:8],"        ",len(sum_1))
                 #print(sum_1)
         if count!=0:
-            info1=str(name_now[0:8])+str("        ")+str(count+1)+"\n"
+            j = 0
+            genename = ""
+            while name_now[j] != "_":
+                genename = genename + name_now[j]
+                j=j+1
+            info1=str(genename)+str("        ")+str(count+1)+"\n"
             info2=str(sum_1)+"\n"
             fout1.write(info1)
             fout1.write(info2)
