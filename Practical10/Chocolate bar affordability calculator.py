@@ -1,9 +1,8 @@
 def num(total_money,price):
     number=total_money//price
-    left=total_money-number*price
-    print(number,left)
-    return
+    left=total_money%price
+    return number,left
 tot_money=input()
 pri=input()
-num(int(tot_money),int(pri))
-
+result=num(int(tot_money),int(pri))
+print(result[0],result[1])
