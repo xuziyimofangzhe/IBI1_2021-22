@@ -59,7 +59,7 @@ if __name__ == "__main__":
 	parser = xml.sax.make_parser()
 	parser.setFeature(xml.sax.handler.feature_namespaces, 0)
 	parser.setContentHandler(GeneHandler())
-	parser.parse("C:/Users/xzy/IBI1_2021-22/Practical14/go_obo.xml")
+	parser.parse("go_obo.xml")
 	#benchmark_stage1 = time.time()
 	#print(benchmark_str % ("Reading xml file",(benchmark_stage1-benchmark_start)*1000,(benchmark_stage1-benchmark_start)*1000))
 	print("There are", len(terms), "terms in go_obo.xml")
