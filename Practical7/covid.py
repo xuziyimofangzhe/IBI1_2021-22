@@ -28,6 +28,7 @@ china_new_death=china_new_data.iloc[0: ,2]
 dt = pd.DataFrame({"china_new_cases": china_new_cases, "china_new_death": china_new_death})
 plt.xlabel('object')
 plt.ylabel('number')
+plt.title('new cases and new deaths in China')
 plt.boxplot(x=dt.values,labels=dt.columns,
             vert=True,#Whether the boxplot needs to be placed vertically. By default, the boxplot should be placed vertically.
             whis = 1.5,#Specify the distance between the upper and lower quartiles. Default is 1.5 times the quartile difference
