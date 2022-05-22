@@ -6,4 +6,4 @@ The BLOSUM score between mouse and human is: 1490
 The BLOSUM score between mouse and random is: -348
 The BLOSUM score between random and human is: -351
 Analysis:
-The percentage of identical amino acids between mouse and human is very high. which implies that DLX5 protein is highly conserved across species. Thus DLX5 may be a housekeeping protein that is important for both humans and mice, and it may have a basic function, such as energy production or resistance to viruses. This protein is not specific in a particular species. Moreover, their low similarity compared to random sequences suggests that this human-mouse similarity is not a coincidence.
+The percentage of identical amino acids between mouse and human is very high, which implies that DLX5 protein is highly conserved across species. Thus DLX5 may be a housekeeping protein that is important for both humans and mice, and it may have a basic function, such as energy production or resistance to viruses. This protein is not specific in a particular species. Moreover, their low similarity compared to random sequences suggests that this human-mouse similarity is not a coincidence.
