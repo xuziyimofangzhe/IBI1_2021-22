@@ -11,7 +11,6 @@ class Gene:
 		self.defstr = None
 		self.is_a = []
 		self.sub = 0
-		self.sub_trans = 0
 
 class GeneHandler(xml.sax.ContentHandler):
 	def __init__(self):
@@ -44,14 +43,13 @@ class GeneHandler(xml.sax.ContentHandler):
 			if self.cur=='id' or self.cur=='defstr' or self.cur=='is_a':
 				self.content.append(content)
 
-def node_sum(ID, add, add_trans):
+def node_sum(ID, add):
 	global dfs_set, terms
 	for prev in terms[ID].is_a:
 		if prev not in dfs_set:
 			terms[prev].sub += add
-			terms[prev].sub_trans += add_trans
 			dfs_set.add(prev)
-			node_sum(prev, add ,add_trans)
+			node_sum(prev, add)
 
 if __name__ == "__main__":
 	#benchmark_str = f"=====[Benchmark] %s cost %d ms, total cost %d ms====="
@@ -66,13 +64,14 @@ if __name__ == "__main__":
 
 	for ID in terms:
 		dfs_set.clear()
-		node_sum(ID, 1, 1 if terms[ID].defstr.find("translation") != -1 else 0)
+		node_sum(ID, 1)
 	
 	Sum = []
 	SumT = []
 	for ID in terms:
 		Sum.append(terms[ID].sub)
-		SumT.append(terms[ID].sub_trans)
+		if terms[ID].defstr.find("translation") != -1:
+			SumT.append(terms[ID].sub)
 	#benchmark_stage2 = time.time()
 	#print(benchmark_str % ("Calculating childnodes",(benchmark_stage2-benchmark_stage1)*1000,(benchmark_stage2-benchmark_start)*1000))
 
@@ -95,7 +94,5 @@ if __name__ == "__main__":
 		print("the translation terms contain, on average, a greater number of child nodes than the overall Gene Ontology")
 	else:
 		print ("They contain an equal number of average child nodes")
-#comment: The average of the "translation" term is 0.12917194761301226, the average of the overall is 12.08177017321504, the "translation" terms contain, on average, a smaller number of child nodes than the overall Gene Ontology
-
-
+#comment: the average of the "translation" term is 13.486486486486486, the average of the overall is 12.08177017321504, the "translation" terms contain, on average, a greater number of child nodes than the overall Gene Ontology
 
