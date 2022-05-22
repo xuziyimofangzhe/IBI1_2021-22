@@ -95,7 +95,7 @@ if __name__ == "__main__":
 		print("the translation terms contain, on average, a greater number of child nodes than the overall Gene Ontology")
 	else:
 		print ("They contain an equal number of average child nodes")
-#comment: the average of the "translation" term is 0.12917194761301226, the average of the overall is 12.08177017321504, the "translation" terms contain, on average, a smaller number of child nodes than the overall Gene Ontology
+#comment: The average of the "translation" term is 0.12917194761301226, the average of the overall is 12.08177017321504, the "translation" terms contain, on average, a smaller number of child nodes than the overall Gene Ontology
 
 
 
