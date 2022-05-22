@@ -1,5 +1,5 @@
-f=open("C:/Users/xzy/IBI1_2021-22/Practical8/Saccharomyces_cerevisiae.R64-1-1.cdna.all.fa")
-fout1 = open('C:/Users/xzy/IBI1_2021-22/Practical8/countgene.fa','w')
+f=open("Saccharomyces_cerevisiae.R64-1-1.cdna.all.fa")
+fout1 = open('countgene.fa','w')
 EcoRI='GAATTC'
 gene_order=0
 seqs=[]
