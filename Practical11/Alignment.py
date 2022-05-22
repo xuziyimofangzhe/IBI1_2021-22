@@ -82,3 +82,4 @@ print('The BLOSUM score between random and human is:',z)
 
 
 
+
