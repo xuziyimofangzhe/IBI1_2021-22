@@ -35,3 +35,4 @@ for line in f:
         seqs.append(line.replace('\n',''))
 f.close()
 fout1.close()
+
