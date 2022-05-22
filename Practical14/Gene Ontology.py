@@ -1,7 +1,7 @@
 import xml.sax
 import matplotlib.pyplot as plt
 #import time
-#from numpy import*
+from numpy import*
 terms = {}
 dfs_set = set()
 
@@ -89,9 +89,12 @@ if __name__ == "__main__":
 	#benchmark_stage3 = time.time()
 	#print(benchmark_str % ("Generating figures",(benchmark_stage3-benchmark_stage2)*1000,(benchmark_stage3-benchmark_start)*1000))
 	plt.show()
-	# print(mean(Sum))
-	# print(mean(SumT))
-
+	if mean(SumT)<mean(Sum):
+		print("the translation terms contain, on average, a smaller number of child nodes than the overall Gene Ontology")
+	elif mean(SumT)>mean(Sum):
+		print("the translation terms contain, on average, a greater number of child nodes than the overall Gene Ontology")
+	else:
+		print ("They contain an equal number of average child nodes")
 #comment: the average of the "translation" term is 0.12917194761301226, the average of the overall is 12.08177017321504, the "translation" terms contain, on average, a smaller number of child nodes than the overall Gene Ontology
 
 
