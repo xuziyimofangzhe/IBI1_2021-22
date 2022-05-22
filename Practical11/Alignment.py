@@ -1,6 +1,6 @@
-random=open("C:/Users/xzy/IBI1_2021-22/Practical11/RandomSeq(1).fa")
-human=open("C:/Users/xzy/IBI1_2021-22/Practical11/DLX5_human.fa")
-mouse=open("C:/Users/xzy/IBI1_2021-22/Practical11/DLX5_mouse.fa")
+random=open("RandomSeq(1).fa")
+human=open("DLX5_human.fa")
+mouse=open("DLX5_mouse.fa")
 def percentage_identity(seq1, seq2):
     count=0
     for i in range(len(seq1)):
