@@ -70,7 +70,7 @@ if __name__ == "__main__":
 	SumT = []
 	for ID in terms:
 		Sum.append(terms[ID].sub)
-		if terms[ID].defstr.find("translation") != -1:
+		if (terms[ID].defstr).lower().find("translation") != -1:
 			SumT.append(terms[ID].sub)
 	#benchmark_stage2 = time.time()
 	#print(benchmark_str % ("Calculating childnodes",(benchmark_stage2-benchmark_stage1)*1000,(benchmark_stage2-benchmark_start)*1000))
